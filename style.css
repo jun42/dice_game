@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Varela Round", sans-serif;
+  background: linear-gradient(#c6414c, #a74475);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  overflow-x: hidden;
+  text-transform: uppercase;
+  z-index: -2;
+}
+
+.wrapper {
+  color: white;
+  height: 600px;
+  width: 1000px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #be7a93;
+  border-radius: 10px;
+  position: relative;
+  z-index: 0;
+}
+.player {
+  width: 500px;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  opacity: 0.8;
+  z-index: -1;
+}
+.player-info {
+  position: absolute;
+  top: 90px;
+}
+
+.player-name {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+.player-score {
+  font-size: 5rem;
+  color: #c7365f;
+}
+
+.turn {
+  background-color: #daaebc;
+  border-radius: 10px;
+  opacity: 1;
+}
+
+.game-manager {
+  height: 300px;
+  width: 200px;
+  background: transparent;
+  position: absolute;
+  top: 30px;
+}
+.game-manager .dice {
+  margin-top: 2rem;
+  font-size: 3rem;
+}
+
+.bottom-nav {
+  width: 700px;
+  height: 120px;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border: 0;
+  position: absolute;
+  bottom: 90px;
+}
+.player-current-info {
+  width: 200px;
+  height: 120px;
+  background-color: #c7365f;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  font-size: 1rem;
+  opacity: 0.8;
+}
+
+.current-score {
+  margin-top: 1rem;
+  font-size: 2rem;
+}
+.btn-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+button {
+  border: 0;
+  background-color: #fff;
+  margin: 0.5rem 0;
+  text-transform: uppercase;
+  cursor: pointer;
+  opacity: 0.8;
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+  font-size: 1rem;
+  z-index: 100;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+i {
+  margin-right: 1rem;
+}
