@@ -16,7 +16,7 @@ const startGame = () => {
   const changeTurn = () => {
     const players = document.querySelectorAll(".player");
     players.forEach((element) => {
-      element.classList.toggle("turn");
+      element.classList.toggle("player--turn");
     });
 
     if (currentPlayer === "player1") {
@@ -28,9 +28,9 @@ const startGame = () => {
   };
 
   const rollDiceBtnHandler = () => {
-    const turn = document.querySelector(".turn");
-    const dice = document.querySelector(".dice");
-    const currentScore = turn.querySelector(".current-score");
+    const turn = document.querySelector(".player--turn");
+    const dice = document.querySelector(".play-button__dice-number");
+    const currentScore = turn.querySelector(".player__current-info__score");
     const smallNumber = 2;
     const num = Math.floor(Math.random() * 6) + 1;
     dice.innerText = String(num);
@@ -42,16 +42,15 @@ const startGame = () => {
     }
   };
   const endGame = () => {
-    console.log("end");
-    const turn = document.querySelector(".turn");
-    turn.classList.add("win");
+    const turn = document.querySelector(".player--turn");
+    turn.classList.add("player--win");
     holdBtn.removeEventListener("click", holdBtnHandler);
     rollDiceBtn.removeEventListener("click", rollDiceBtnHandler);
   };
   const holdBtnHandler = () => {
-    const turn = document.querySelector(".turn");
-    const currentScore = turn.querySelector(".current-score");
-    const playerScore = turn.querySelector(".player-score");
+    const turn = document.querySelector(".player--turn");
+    const currentScore = turn.querySelector(".player__current-info__score");
+    const playerScore = turn.querySelector(".player__info__score");
     const recordScore = () => {
       player_data[currentPlayer].score += Number(currentScore.innerText);
       playerScore.innerText = player_data[currentPlayer].score;
@@ -67,13 +66,13 @@ const startGame = () => {
       changeTurn();
     }
   };
-  const newGameBtn = document.querySelector(".new-game");
+  const newGameBtn = document.querySelector(".play-button__new-game");
   newGameBtn.addEventListener("click", initGame);
 
-  const rollDiceBtn = document.querySelector(".roll-dice");
+  const rollDiceBtn = document.querySelector(".bottom-nav__roll-dice-btn");
   rollDiceBtn.addEventListener("click", rollDiceBtnHandler);
 
-  const holdBtn = document.querySelector(".hold");
+  const holdBtn = document.querySelector(".bottom-nav__hold-btn");
   holdBtn.addEventListener("click", holdBtnHandler);
 };
 

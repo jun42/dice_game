@@ -17,7 +17,7 @@ body {
   z-index: -2;
 }
 
-.wrapper {
+.play-board {
   color: white;
   height: 600px;
   width: 1000px;
@@ -41,34 +41,34 @@ body {
   opacity: 0.8;
   z-index: -1;
 }
-.player-info {
-  position: absolute;
-  top: 90px;
-}
 
-.player-name {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-}
-.player-score {
-  font-size: 5rem;
-  color: #c7365f;
-}
-
-.turn {
+.player--turn {
   background-color: #daaebc;
   border-radius: 10px;
   opacity: 1;
 }
+.player__info {
+  position: absolute;
+  top: 90px;
+}
 
-.game-manager {
+.player__info__name {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+.player__info__score {
+  font-size: 5rem;
+  color: #c7365f;
+}
+
+.play-button {
   height: 300px;
   width: 200px;
   background: transparent;
   position: absolute;
   top: 30px;
 }
-.game-manager .dice {
+.play-button__dice-number {
   margin-top: 2rem;
   font-size: 3rem;
 }
@@ -86,7 +86,7 @@ body {
   left: 40%;
   bottom: 90px;
 }
-.player-current-info {
+.player__current-info {
   width: 200px;
   height: 120px;
   background-color: #c7365f;
@@ -99,18 +99,19 @@ body {
   opacity: 0.8;
 }
 
-.current-score {
+.player__current-info__score {
   margin-top: 1rem;
   font-size: 2rem;
 }
-.btn-wrapper {
+.bottom-nav__btn-wrapper {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
 }
-
-button {
+.play-button__new-game,
+.bottom-nav__hold-btn,
+.bottom-nav__roll-dice-btn {
   border: 0;
   background-color: #fff;
   margin: 0.5rem 0;
@@ -123,15 +124,19 @@ button {
   z-index: 100;
 }
 
-button:active {
+.play-button__new-game:active,
+.bottom-nav__hold-btn:active,
+.bottom-nav__roll-dice-btn:active {
   transform: scale(0.98);
 }
 
-i {
+.play-button__new-game i,
+.bottom-nav__hold-btn i,
+.bottom-nav__roll-dice-btn i {
   margin-right: 1rem;
 }
 
-.win {
+.player--win {
   background-color: black;
   color: white;
 }
