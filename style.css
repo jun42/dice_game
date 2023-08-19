@@ -83,6 +83,7 @@ body {
 
   border: 0;
   position: absolute;
+  left: 40%;
   bottom: 90px;
 }
 .player-current-info {
@@ -128,4 +129,9 @@ button:active {
 
 i {
   margin-right: 1rem;
+}
+
+.win {
+  background-color: black;
+  color: white;
 }
