@@ -18,15 +18,10 @@ const startGame = () => {
     players.forEach((element) => {
       element.classList.toggle("player--turn");
     });
-
-    if (currentPlayer === "player1") {
-      currentPlayer = "player2";
-    } else {
-      currentPlayer = "player1";
-    }
-    console.log(currentPlayer);
+    currentPlayer === "player1"
+      ? (currentPlayer = "player2")
+      : (currentPlayer = "player1");
   };
-
   const rollDiceBtnHandler = () => {
     const turn = document.querySelector(".player--turn");
     const dice = document.querySelector(".play-button__dice-number");
@@ -60,7 +55,7 @@ const startGame = () => {
       return score > goal;
     };
     recordScore();
-    if (isWin(player_data[currentPlayer].score, 10)) {
+    if (isWin(player_data[currentPlayer].score)) {
       endGame();
     } else {
       changeTurn();
