@@ -27,7 +27,7 @@ https://pig-game-v2.netlify.app/
 - script.js
 
 
-후기:
+# 후기:
 
 ### HTML구조가 많은 것을 결정한다.
 
