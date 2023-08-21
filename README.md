@@ -14,6 +14,10 @@
 
 https://pig-game-v2.netlify.app/
 
+# 배포
+
+https://jun42.github.io/dice_game/
+
 # 디렉토리 구조
 
 - index.html
